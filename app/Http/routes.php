@@ -12,3 +12,4 @@ Route::get('/cookie',function(){
 
 Route::get('insert', 'StudInsertController@insertform');
 Route::post('create', 'StudInsertController@insert');
+Route::get('view', 'StudViewController@index');
