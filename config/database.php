@@ -56,7 +56,7 @@ return [
             'driver' => 'mysql',
             'host' => 'localhost',
             'port' => env('DB_PORT', '3306'),
-            'database' => 'colegio',
+            'database' => 'aerolinea',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
