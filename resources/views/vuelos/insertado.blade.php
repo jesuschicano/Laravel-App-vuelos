@@ -4,7 +4,7 @@
 
 @section('content')
 <div class='row'>
-  Vuelo insertado. <br>
+  <div class="alert alert-success"><strong>Insertado.</strong>Si lo desea puede volver pulsando el siguiente botón.</div>
   <a class="btn btn-info" href='/insertar'>Volver</a>
 </div>
 @endsection
