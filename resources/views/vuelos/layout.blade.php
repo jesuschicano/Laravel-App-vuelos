@@ -11,6 +11,13 @@
         <h1>App Vuelos</h1>
         <h2>Welcome to the awesome app made with Laravel</h2>
       </div>
+      <div class="row">
+        <nav class="navbar">
+          <ul>
+            <li><a href="/insertar">Insertar Vuelo</a></li>
+          </ul>
+        </nav>
+      </div>
       <hr>
       @yield('content')
     </div>
