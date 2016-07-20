@@ -12,11 +12,10 @@
         <h2>Welcome to the awesome app made with Laravel</h2>
       </div>
       <div class="row">
-        <nav class="navbar">
-          <ul>
-            <li><a href="/insertar">Insertar Vuelo</a></li>
-          </ul>
-        </nav>
+        <ul class="nav nav-pills">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/insertar">Insertar Vuelo</a></li>
+        </ul>
       </div>
       <hr>
       @yield('content')

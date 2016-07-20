@@ -16,20 +16,18 @@ class VuelosController extends Controller
   }
 
   public function insertarForm(){
-    return view('vuelos.form_insert')
+    return view('vuelos.form_insert');
   }
 
   public function insertar(Request $request){
     $nombre = $request->input('nombre');
     $aerolinea = $request->input('aerolinea');
 
-    Vuelo::table('vuelos')->insert([
-      'nombre'=>$nombre,
-      'aerolinea'=>$aerolinea]
-    );
+    $vuelo = new Vuelo;
+    $vuelo->nombre = $nombre;
+    $vuelo->aerolinea = $aerolinea;
+    $vuelo->save();
 
-    echo "<div class='row'>
-      Vuelo insertado. <a href='/insertar'>Volver</a>
-    </div>"
+    return view('vuelos.insertado');
   }
 }

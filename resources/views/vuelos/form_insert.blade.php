@@ -14,6 +14,6 @@
       <label for="aerolinea">Nombre de la aerolínea</label>
       <input type="text" name="aerolinea" class="form-control" placeholder="Aerolínea">
     </div>
-    <button type="submit" class="btn btn-info">Insertar</button>
+    <button type="submit" class="btn btn-success">Insertar</button>
   </form>
 @endsection
