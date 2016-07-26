@@ -4,7 +4,7 @@
 
 @section('content')
   <form action="/crear" method="post">
-    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+    {{ csrf_field() }}
     <!-- hidden token -->
     <div class="form-group">
       <label for="nombre">Nombre del vuelo</label>

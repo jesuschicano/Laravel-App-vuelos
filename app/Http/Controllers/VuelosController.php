@@ -30,4 +30,24 @@ class VuelosController extends Controller
 
     return view('vuelos.insertado');
   }
+
+  public function preEdit($id){
+    // Asegurar que hemos encontrado el especificado
+    $vuelo = Vuelo::where('id', $id)->first();
+    return view('vuelos.form_edit',['vuelo'=>$vuelo]);
+  }
+  public function edit(Request $request, $id){
+    $nuevoNombre = $request->input('nombre');
+    $nuevaAerolinea = $request->input('aerolinea');
+
+    // Primero buscamos el vuelo a modificar
+    // con el ID enviado
+    $vuelo = Vuelo::find($id);
+    // Modificamos los datos una vez seleccionado
+    $vuelo->nombre = $nuevoNombre;
+    $vuelo->aerolinea = $nuevaAerolinea;
+    $vuelo->save();
+
+    return view('vuelos.modificado');
+  }
 }
