@@ -50,4 +50,12 @@ class VuelosController extends Controller
 
     return view('vuelos.modificado');
   }
+
+  public function borra($id){
+    // Solo en el caso de saber el ID a borrar
+    // usaremos directamente destroy()
+    Vuelo::destroy($id);
+
+    return view('vuelos.borrado');
+  }
 }

@@ -17,7 +17,7 @@
       <td>{{ $vuelo->nombre }}</td>
       <td>{{ $vuelo->aerolinea }}</td>
       <td><a href="/edit/{{ $vuelo->id }}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a></td>
-      <td><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
+      <td><a href="/borra/{{ $vuelo->id }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
     </tr>
   @endforeach
   </table>
